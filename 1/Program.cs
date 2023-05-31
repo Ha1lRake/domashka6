@@ -4,52 +4,29 @@
 
 // // 1, -7, 567, 89, 223-> 3
 
-// Console.WriteLine("Введите ряд чисел");
-
-// int 
 
 
 
-// int count = 0;
 
-// int size = numbers.Length;
 
-// for(int i = 0; i < size; i++)
-// {
-//     if(numbers[i] > 0)
-//     {
-//         count++;
-//     }
-// }
+Console.WriteLine("Введите количество элементов");
 
-// Console.WriteLine(count);
+int size = Convert.ToInt32(Console.ReadLine());
 
-Console.WriteLine("Введите количество элементов массива ");
-int m = Convert.ToInt32(Console.ReadLine());
-int[] Array = new int[m];
+int[] array = new int [size];
 
-void mas(int m)
+int count = 0;
+
+for (int i = 0; i < size; i++)
 {
-for (int i = 0; i < m; i++)
-{
-Console.WriteLine($"Введите {i+1} элемент массива");
-Array[i] = Convert.ToInt32(Console.ReadLine());
-}
+    Console.WriteLine($"{i + 1} число");
+
+    array[i] = Convert.ToInt32(Console.ReadLine());
+
+    if(array[i] > 0)
+    {
+        count++;
+    }
 
 }
-
-int kol(int[] Array)
-{
-int i=0;
-int sum = 0;
-while (i < Array.Length)
-{
-if(Array[i]>0)
-sum = sum + 1;
-i = i + 1;
-}
-return sum;
-}
-
-mas(m);
-Console.Write($"\n Чисел больше нуля: {kol(Array)}");
+Console.WriteLine($" {count} чисел больше 0  ");
